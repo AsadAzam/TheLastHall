@@ -1,0 +1,33 @@
+{
+    "name": "CheckScene",
+    "maps": [
+        {
+            "name": "Scene",
+            "id": "8b766d08-a9ba-42b9-83ca-713a3eb8be6d",
+            "actions": [
+                {
+                    "name": "Check",
+                    "type": "Button",
+                    "id": "6cc75149-5c91-491e-8bba-d41240adc549",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "e0ef453c-3cd0-4319-9f9e-867fdc99bfbb",
+                    "path": "<Keyboard>/enter",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Check",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
