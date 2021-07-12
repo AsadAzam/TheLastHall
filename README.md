@@ -2,7 +2,7 @@
 ## The Last Hall
 The last hall, is a simple 3D game which uses features from nearly all the lectures in Games50. It is an endless game with the aim of reaching the furthest point in the game.
 
-The first block/platform is where the FPS controller is initiallized. We now find the current transform of the initial block. The initial block is a Pipe with 8 sides (dealing with pipes and transforms is a bit tricky). There are 5 diffent types of Prefabs (created).
+The first block/platform is where the FPS controller is initiallized. We now find the current transform of the initial block. The initial block is a Pipe with 8 sides (dealing with pipes and transforms is a bit tricky). There are 5 different types of Prefabs (created).
 The prefabs are:
 - None -> This is a simple pipe the player can pass through without any hinderance
 - Hole -> This pipe has a large hole in between, the user has to jump over it else he will fall and game will be over.
