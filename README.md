@@ -3,18 +3,18 @@
 ### Introduction
 The last hall, is a simple 3D game which uses features from nearly all the lectures in Games50. It is an endless game with the aim of reaching the furthest point in the game.
 
-The first block/platform is where the FPS controller is initiallized. We now find the current transform of the initial block. The initial block is a Pipe with 8 sides (dealing with pipes and transforms is a bit tricky). There are 5 diffent types of Prefabs (created).
+The first block/platform is where the FPS controller is initialized. We now find the current transform of the initial block. The initial block is a Pipe with 8 sides (dealing with pipes and transforms is a bit tricky). There are 5 different types of Prefabs (created).
 
 The prefabs are:
 - None -> This is a simple pipe the player can pass through without any hinderance
 - Hole -> This pipe has a large hole in between, the user has to jump over it else he will fall and game will be over.
 - Axe -> This pipe has a axe swinging around the block, which checks for collision with the player.
 - Hammer -> This pipe has a hammer which is rotating in a circle and also checks for collision with the player.
-- Saw -> This pipe has a saw attached to it, which moves back and forth and check for collisin with the player.
+- Saw -> This pipe has a saw attached to it, which moves back and forth and check for collision with the player.
 
-The prefabs are randomly loaded one after the other so that the game is endless (in the video I render only one block ahead to demonstrate this), as the user keeps on moving forward the previous block keeps on despawning after every 2 seconds. The user scores by the distance he has moved forward.
+The prefabs are randomly loaded one after the other so that the game is endless (in the video I render only one block ahead to demonstrate this), as the user keeps on moving forward the previous block keeps on de-spawning after every 2 seconds. The user scores by the distance he has moved forward.
 
-The game also has fog and a differnt kind of lighting (it makes the game really really hard so not included in the video).
+The game also has fog and a different kind of lighting (it makes the game really hard so not included in the video).
 
 ----
 ### Prefab(s) Breakdown
@@ -42,19 +42,19 @@ There are three scenes in the game representing the three states a user can be.
     4. The Scene doesn't have any illumination and is dependent on the global illumination. Also the game has a very dense fog which makes it hard for the user to see the traps from far behind and prepare accordingly. 
     5. As the user keeps on moving forward he scores as the ammount of distance he moves forward, there is a check so that if the user turns behind the score doesn't start decreasing.
     6. The user can fail the level by either falling behind the pipe he is currently in, or falling in a hole, also he will fail by hitting either of the Axe, Hammer or Saw.
-3. **GameOverScene** : This secene is triggered if the user fails anyhow. It will display the final score and the game ends.
+3. **GameOverScene** : This scene is triggered if the user fails anyhow. It will display the final score and the game ends.
 
 ----
 ### Script(s) Breakdown
 The full game has 6 scripts:
-1. **BaseTile** : This scripts finds the generated pipes in the gameworld and it the user enters a pipe then spaws a new ranom pipe ahead and destroys the current pipe after 2 seconds.
+1. **BaseTile** : This scripts finds the generated pipes in the game world and it the user enters a pipe then spawns a new random pipe ahead and destroys the current pipe after 2 seconds.
 2. **CheckCollision** : This script just keeps on checking if the user has hit the Axe, Hammer or the Saw.
-3. **LoadSceneOnInput** : This keeps a static integer score so that it resets every time the user restarts the game. Also it crontrolls the current scene to be displayed.
-4. **MapGenerator** : This is the main script which keeps track of the position of the current block and then starts spawing further blocks from the position's reference. Also this keeps on updating the current score of the user.
+3. **LoadSceneOnInput** : This keeps a static integer score so that it resets every time the user restarts the game. Also it controls the current scene to be displayed.
+4. **MapGenerator** : This is the main script which keeps track of the position of the current block and then starts spawning further blocks from the position's reference. Also this keeps on updating the current score of the user.
 5. **MaxScore** : This checks the maximum score of the user and displays it in the GameOverScene.
-6. **Score** : Finds the current position of the usercamera and finds its poition in the x-axis. The score is determind by the current position in the x-axis. Also it check if the user has fallen down below a certain point in the gameworld.
+6. **Score** : Finds the current position of the user camera and finds its position in the x-axis. The score is determined by the current position in the x-axis. Also it check if the user has fallen down below a certain point in the game world.
 
 ----
 ### Complexity and Uniqueness
 The project is fairly complex with the procedural generation of the blocks being the most complex part of the project.
-The project is unique as it feels like a game like temple run but with the fexibility of moving at one's own speed and meanwhile not knowing what is further ahead (due to the fog in the game too).
+The project is unique as it feels like a game like temple run but with the flexibility of moving at one's own speed and meanwhile not knowing what is further ahead (due to the fog in the game too).
